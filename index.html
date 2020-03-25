@@ -28,8 +28,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Resume</a>
           </li>
-          
-          </li>
           <li class="nav-item">
             <a class="btn btn-primary btn-lg navCTA" href="#" role="button">Contact Me</a>
           </li>
@@ -49,8 +47,7 @@
 
     <!-- Carousel -->
     <div class="container-fluid content">
-        <h2 class="sectionHeading">Research
-        </h2>
+        <h2 class="sectionHeading">Research</h2>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -77,10 +74,16 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+      </div> <!-- you were missing this closing div to close the container-fluid content class.
+
+      That's what was causing your footer to have empty space on the left side, and it was pushed to the right (so your browser window would scroll to the right) -->
 
     <!-- Images -->
     <div class="container-fluid content">
+    <!-- Instead of making a new container-fluid content in the beginning of every new section, you can just declare it in the beginning only once. No need to make a new one, put little content there, close it. And then make a new one again. -->
         <h2 class="sectionHeading">Define</h2>
+        <!-- You could put these images in classes as you have below col-SizeOfScreen-12 -->
+        <!-- That way they should be centered in the window, and to make them smaller, you can give them either here, or in css perhaps 80% width (so they don't appear so large-->
         <img src="images/2 define1.png" class="img-fluid" alt="Responsive image">
         <img src="images/2define2.png" class="img-fluid" alt="Responsive image">
         <img src="images/2define3.png" class="img-fluid" alt="Responsive image">
@@ -90,7 +93,9 @@
     <div class="container-fluid content">
       <h2 class="sectionHeading">Ideate</h2>
       <div class="row showsNear">
-
+          <!--  Great use of bootstrap!! No need to make everything from scratch. The bootstrap cards can help tremendously with designs and we just put our images there.
+You can play with the font, give it some color (you're using blue in this theme, so maybe go with that  so it all clicks together.)
+          -->
         <!-- Card 1 -->
         <div class="cardContainer col-lg-4 col-md-4 col-sm-12">
           <div class="card">
@@ -126,7 +131,7 @@
           </div>
         </div>
         <!-- End card 3 -->
-
+          <!-- Great comments on where your cards/sections end. Makes the readability very good!! -->
       </div>
     </div>
     <!-- End cards -->
